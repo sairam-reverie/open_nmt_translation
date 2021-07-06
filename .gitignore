@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#model_files
+
+**/info
+**/model.bin
+**/source_vocabulary.txt
+**/src.model
+**/target_vocabulary.txt
+**/tgt.model
