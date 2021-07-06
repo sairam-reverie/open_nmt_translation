@@ -1,0 +1,8 @@
+_pycache_
+.venv
+app_backup.py
+client_script.py
+my_password.txt
+telugu_dev.txt
+english_dev.txt
+telugu_sample.txt
