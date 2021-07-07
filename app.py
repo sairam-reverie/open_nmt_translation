@@ -32,14 +32,13 @@ def translate():
 
     # Loading the correct model
     try:
-        #Dont use pop, just get them form dict
-        src = inputs.pop("src")
-        tgt = inputs.pop("tgt")
+        src = inputs.get("src")
+        tgt = inputs.get("tgt")
         model_name = f"{src}-{tgt}"
         model_dict = models[model_name]
 
-    except Exception as e:
-        out = {'status': STATUS_ERROR,'error': str(e)}
+    except KeyError:
+        out = {'status': STATUS_ERROR,'error': "Translation for this pair of languages is not supported"}
         return out,422
         #Send error not serving this pair of languages
 
